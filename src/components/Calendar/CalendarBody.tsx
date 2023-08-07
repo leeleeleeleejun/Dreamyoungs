@@ -1,9 +1,9 @@
+import { useMemo } from "react";
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
 import { isSameMonth, isSameDay, addDays, format } from "date-fns";
 import { CalendarProps } from "@/types";
 import CalendarWeek from "./CalendarWeek";
 import * as S from "./Calendar.style";
-import { useMemo } from "react";
 
 export default function CalendarBody({
   targetDate,
@@ -23,6 +23,7 @@ export default function CalendarBody({
 
     while (date <= addDays(endDate, 7) && rows.length < 6) {
       const weeks = []; // 일주일 단위로 묶음
+
       for (let i = 0; i < 7; i++) {
         const currDate = date;
         weeks.push(

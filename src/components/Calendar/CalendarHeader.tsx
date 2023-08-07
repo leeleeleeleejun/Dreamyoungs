@@ -22,7 +22,7 @@ export default function CalendarHeader({
   const prevMonth = () => {
     if (month === 1) {
       if (year === YearArray[YearArray.length - 1]) {
-        alert("지정범위에서 벗어났습니다");
+        alert(alertMessage);
         return;
       }
       setYear((prev) => --prev);
@@ -35,7 +35,7 @@ export default function CalendarHeader({
   const nextMonth = () => {
     if (month === 12) {
       if (year === YearArray[0]) {
-        alert("지정범위에서 벗어났습니다");
+        alert(alertMessage);
         return;
       }
       setYear((prev) => ++prev);
@@ -72,6 +72,8 @@ export default function CalendarHeader({
     </S.CalendarHeaderBox>
   );
 }
+
+const alertMessage = "지정범위에서 벗어났습니다";
 
 const YearArray: number[] = Array(14)
   .fill(2010)
