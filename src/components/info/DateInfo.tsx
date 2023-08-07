@@ -5,7 +5,7 @@ import { InfoProps } from "@/types";
 import * as S from "./Info.style";
 
 // 캘린더는 초기화면에 사용되지 않기 때문에 초기로딩속도를 줄이기 위해 동적import를 사용했습니다.
-const Calendar = lazy(() => import("../Calendar"));
+const Calendar = lazy(() => import("@/components/Calendar"));
 
 const DateInfo = ({ infoCategory, defaultValue, setDataFunc }: InfoProps) => {
   const initialDate =

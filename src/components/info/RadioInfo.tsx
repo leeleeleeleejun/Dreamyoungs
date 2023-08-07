@@ -1,8 +1,8 @@
 import { InfoProps } from "@/types";
 import * as S from "./Info.style";
 import React from "react";
-import Label from "../common/Label";
-import Radio from "../common/Radio";
+import Label from "@/components/common/Label";
+import Radio from "@/components/common/Radio";
 
 const RadioInfo = ({ infoCategory, defaultValue, setDataFunc }: InfoProps) => {
   return (

@@ -1,6 +1,6 @@
 import { postInfo } from "@/api";
 import { Info } from "@/types";
-import Button from "../common/Button";
+import Button from "@/components/common/Button";
 
 export default function PostButton({ data }: { data: Info }) {
   const PostInfoFunc = () => {

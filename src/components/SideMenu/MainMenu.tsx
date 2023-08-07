@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as S from "./SideMenu.style";
-import UpIcon from "../icons/UpIcon";
-import DownIcon from "../icons/DownIcon";
+import UpIcon from "@/components/icons/UpIcon";
+import DownIcon from "@/components/icons/DownIcon";
 import SubMenu from "./SubMenu";
 import { MenuProps } from "@/types";
 

@@ -2,12 +2,12 @@ import { useEffect, useState, useCallback } from "react";
 import { getInfo } from "@/api";
 import { Info, InfoKey } from "@/types";
 import * as S from "./Contents.style";
-import BasicInfo from "../info/BasicInfo";
-import InputInfo from "../info/InputInfo";
-import CheckBoxInfo from "../info/CheckBoxInfo";
-import RadioInfo from "../info/RadioInfo";
-import DateInfo from "../info/DateInfo";
-import PostButton from "../PostButton";
+import BasicInfo from "@/components/info/BasicInfo";
+import InputInfo from "@/components/info/InputInfo";
+import CheckBoxInfo from "@/components/info/CheckBoxInfo";
+import RadioInfo from "@/components/info/RadioInfo";
+import DateInfo from "@/components/info/DateInfo";
+import PostButton from "@/components/PostButton";
 
 export default function Contents() {
   const [data, setData] = useState<Info>();

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Select, OptionItem, OptionList } from "../common/Select";
+import { Select, OptionItem, OptionList } from "@/components/common/Select";
 import * as S from "./Calendar.style";
-import SelectIcon from "../icons/SelectIcon";
+import SelectIcon from "@/components/icons/SelectIcon";
 
 export default function CalendarSelect({
   value,

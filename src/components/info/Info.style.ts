@@ -1,5 +1,5 @@
 import { css, styled } from "styled-components";
-import { Input } from "../common/Input";
+import { Input } from "@/components/common/Input";
 import { basicFont } from "@/styles/CommonStyle";
 
 export const BasicInfo = styled.div`

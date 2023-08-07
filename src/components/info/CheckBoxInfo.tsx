@@ -1,8 +1,8 @@
 import React from "react";
 import { InfoProps } from "@/types";
 import * as S from "./Info.style";
-import CheckBox from "../common/CheckBox";
-import Label from "../common/Label";
+import CheckBox from "@/components/common/CheckBox";
+import Label from "@/components/common/Label";
 
 const CheckBoxInfo = ({
   infoCategory,
