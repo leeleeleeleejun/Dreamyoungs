@@ -19,8 +19,11 @@ export default function CalendarBody({
   let days = []; //1주일 단위
   let date = startDate;
 
+  // startDate로 부터 endDate+7일 까지 일주일 단위로 반복문 순환
   while (date <= addDays(endDate, 7)) {
+    // 6주 이상 나올 시 중단
     if (rows.length === 6) break;
+
     for (let i = 0; i < 7; i++) {
       const currDate = date;
       days.push(

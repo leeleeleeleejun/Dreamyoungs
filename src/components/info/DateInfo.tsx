@@ -3,6 +3,7 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { format } from "date-fns";
 import { InfoProps } from "@/types";
 import * as S from "./Info.style";
+
 // 캘린더는 초기화면에 사용되지 않기 때문에 초기로딩속도를 줄이기 위해 동적import를 사용했습니다.
 const Calendar = lazy(() => import("../Calendar"));
 
@@ -50,7 +51,7 @@ const DateInfo = ({ infoCategory, defaultValue, setDataFunc }: InfoProps) => {
         $isShow={isShow}
       />
       {isShow && (
-        // Calendar의 loading시간이 약 13밀리초이므로 스켈레톤UI 사용이 오히려 UX 저하 예상
+        // Calendar의 loading 시간이 약 20밀리초 이내이므로 스켈레톤 UI 사용이 오히려 UX 저하 예상
         <Suspense fallback={null}>
           <Calendar
             targetDate={targetDate}
