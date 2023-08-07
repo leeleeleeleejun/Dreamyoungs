@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
+import CheckIcon from "@/assets/Check.svg";
 
-const CheckBox = styled.input<{ id: string; defaultChecked: boolean }>`
+const CheckBox = styled.input`
   appearance: none;
   width: 16px;
   height: 16px;
@@ -17,7 +18,7 @@ const CheckBox = styled.input<{ id: string; defaultChecked: boolean }>`
 
   &:checked {
     border-color: transparent;
-    background-image: url("/Check.svg");
+    background-image: url(${CheckIcon});
     background-size: 80% 80%;
     background-position: 50%;
     background-repeat: no-repeat;

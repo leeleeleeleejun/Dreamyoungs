@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Select, OptionItem, OptionList } from "@/components/common/Select";
 import * as S from "./Calendar.style";
-import SelectIcon from "@/components/icons/SelectIcon";
+import { ReactComponent as SelectIcon } from "@/assets/SelectIcon.svg";
 
 export default function CalendarSelect({
   value,
@@ -18,10 +18,13 @@ export default function CalendarSelect({
   const setShowListFunc = () => {
     setShowList((prev) => !prev);
   };
+
+  const text = isYear ? "년" : "월";
+
   return (
     <S.SelectBox>
       <Select $showList={showList} onClick={setShowListFunc}>
-        {value + (isYear ? "년" : "월")}
+        {value + text}
         <SelectIcon />
       </Select>
       {showList && (
@@ -35,7 +38,7 @@ export default function CalendarSelect({
                 setShowListFunc();
               }}
             >
-              {item + (isYear ? "년" : "월")}
+              {item + text}
             </OptionItem>
           ))}
         </OptionList>

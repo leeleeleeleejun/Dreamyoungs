@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import * as S from "./Calendar.style";
-import LeftArrowIcon from "@/components/icons/LeftArrowIcon";
-import RightArrowIcon from "@/components/icons/RightArrowIcon";
 import CalendarSelect from "./CalendarSelect";
+import { ReactComponent as LeftArrowIcon } from "@/assets/LeftArrowIcon.svg";
+import { ReactComponent as RightArrowIcon } from "@/assets/RightArrowIcon.svg";
 
 export default function CalendarHeader({
   targetDate,

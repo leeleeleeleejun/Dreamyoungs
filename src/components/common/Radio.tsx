@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import RadioIcon from "@/assets/Radio.svg";
 
 const Radio = styled.input<{ id: string; defaultChecked: boolean }>`
   appearance: none;
@@ -17,7 +18,7 @@ const Radio = styled.input<{ id: string; defaultChecked: boolean }>`
 
   &:checked {
     border-color: transparent;
-    background-image: url("/Radio.svg");
+    background-image: url(${RadioIcon});
     background-size: 50% 50%;
     background-position: 50%;
     background-repeat: no-repeat;
