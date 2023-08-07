@@ -1,5 +1,6 @@
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
 import { isSameMonth, isSameDay, addDays, format } from "date-fns";
+import { CalendarProps } from "@/types";
 import CalendarWeek from "./CalendarWeek";
 import * as S from "./Calendar.style";
 
@@ -8,16 +9,12 @@ export default function CalendarBody({
   setTargetDate,
   activeDate,
   setActiveDate,
-}: {
-  targetDate: Date;
-  setTargetDate: (date: Date) => void;
-  activeDate: Date;
-  setActiveDate: (date: Date) => void;
-}) {
+}: CalendarProps) {
   const monthStart = startOfMonth(targetDate); //현재 달의 시작 날짜
   const monthEnd = endOfMonth(monthStart); //현재 달의 마지막 날짜
   const startDate = startOfWeek(monthStart); // 현재 달의 시작 날짜가 포함된 주의 시작 날짜
   const endDate = endOfWeek(monthEnd); // 현재 달의 마지막 날짜가 포함된 주의 끝 날짜
+
   const rows = []; //달력에 표시되는 총 날짜
   let days = []; //1주일 단위
   let date = startDate;

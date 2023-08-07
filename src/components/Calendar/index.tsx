@@ -1,3 +1,4 @@
+import { CalendarProps } from "@/types";
 import * as S from "./Calendar.style";
 import CalendarHeader from "./CalendarHeader";
 import CalendarBody from "./CalendarBody";
@@ -8,12 +9,7 @@ export default function Calendar({
   setTargetDate,
   activeDate,
   setActiveDate,
-}: {
-  targetDate: Date;
-  setTargetDate: (date: Date) => void;
-  activeDate: Date;
-  setActiveDate: (date: Date) => void;
-}) {
+}: CalendarProps) {
   return (
     <S.CalendarBox>
       <CalendarHeader targetDate={targetDate} setTargetDate={setTargetDate} />

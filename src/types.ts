@@ -28,3 +28,10 @@ export interface MenuProps {
   subActive: string;
   setSubActive: (currMenu: string) => void;
 }
+
+export interface CalendarProps {
+  targetDate: Date;
+  setTargetDate: (date: Date) => void;
+  activeDate: Date;
+  setActiveDate: (date: Date) => void;
+}
